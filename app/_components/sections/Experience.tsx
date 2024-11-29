@@ -29,7 +29,7 @@ const Experience = () => {
         rel="noopener noreferrer"
         className="mb-6 inline-block text-base text-gray-700 transition-colors duration-300 hover:text-[#4F5AED]"
       >
-        Litmus7 Systems Consulting Pvt. Ltd.
+        Litmus7 Systems Consulting Ltd.
       </a>
       <div className="relative">
         <div className="absolute bottom-0 left-4 h-full w-px bg-[#D0D7FE]">

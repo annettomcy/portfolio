@@ -64,7 +64,7 @@ const Portfolio = () => {
       <div className="flex flex-col items-center gap-4 sm:gap-6 lg:grid lg:grid-cols-[minmax(350px,_480px)_1fr]">
         <ErrorBoundary fallback={<div>Failed to load profile</div>}>
           <Suspense fallback={<Loader />}>
-            <div className="self-center">
+            <div className="lg:sticky lg:top-6">
               <Main />
             </div>
           </Suspense>
