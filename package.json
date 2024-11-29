@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "motion",
+    "typescript"
+  ],
+  "author": "Annet Tomcy",
+  "license": "MIT",
+  "description": "My portfolio built with Next.js.",
+  "dependencies": {
+    "@types/next": "^8.0.7",
+    "lucide-react": "^0.460.0",
+    "motion": "^11.11.17",
+    "next": "^15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.5",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-next": "^15.0.2",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vercel": "^37.12.1"
+  }
+}
