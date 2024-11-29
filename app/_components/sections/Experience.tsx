@@ -44,7 +44,7 @@ const Experience = () => {
           />
         </div>
 
-        {experiences.map((exp, index) => (
+        {experiences.map((exp) => (
           <motion.div
             key={exp.role}
             initial={{ opacity: 0, x: -20 }}

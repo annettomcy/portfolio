@@ -112,7 +112,9 @@ const Main = () => {
       </motion.div>
 
       <motion.div variants={itemVariants} className="space-y-4 border-t pt-6">
-        <h2 className="text-xl font-semibold text-gray-800">Let's Connect</h2>
+        <h2 className="text-xl font-semibold text-gray-800">
+          Let&apos;s Connect
+        </h2>
         <div className="flex items-center gap-3">
           {socialLinks.map((link) => (
             <motion.a

@@ -1,9 +1,17 @@
 "use client";
 import { ChevronDownIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 import { useState } from "react";
 
-const speakingEvents = [
+interface SpeakingEvent {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+}
+
+const speakingEvents: SpeakingEvent[] = [
   {
     title: "All Hands Meet 2024",
     description:
@@ -25,6 +33,12 @@ const Speaking = () => {
 
   const handleClick = () => {
     setCurrentIndex((prev) => (prev + 1) % speakingEvents.length);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleClick();
+    }
   };
 
   return (
@@ -81,8 +95,12 @@ const Speaking = () => {
           </motion.div>
 
           <div
+            role="button"
+            tabIndex={0}
+            aria-label="Cycle through speaking events"
             className="relative h-40 w-40 flex-shrink-0 cursor-pointer"
             onClick={handleClick}
+            onKeyDown={handleKeyDown}
           >
             {speakingEvents.map((event, index) => {
               const position =
@@ -101,9 +119,13 @@ const Speaking = () => {
                   }}
                   transition={{ duration: 0.5 }}
                 >
-                  <img
+                  <Image
                     src={event.image}
                     alt={event.title}
+                    width={160}
+                    height={160}
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
                     className="h-full w-full rounded-xl object-cover shadow-lg"
                   />
                 </motion.div>
