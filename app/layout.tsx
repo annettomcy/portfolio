@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -12,18 +12,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://annettomcy.com"),
   title: {
-    default: "Annet Tomcy | Frontend Engineer",
-    template: "%s | Annet Tomcy",
+    default: "Annet Tomcy - Frontend Engineer | Web Development Portfolio",
+    template: "%s | Annet Tomcy Portfolio",
   },
   description:
-    "Experienced Frontend Engineer specializing in React, TypeScript, and modern web technologies.",
+    "Experienced Frontend Engineer Annet Tomcy specializing in React, TypeScript, and modern web technologies. Explore my professional portfolio, projects, and skills.",
   keywords: [
+    "Annet Tomcy",
     "Frontend Developer",
-    "React",
+    "Web Developer",
+    "React Engineer",
     "TypeScript",
-    "Web Development",
     "Next.js",
-    "Frontend Engineer",
+    "Frontend Portfolio",
   ],
   authors: [{ name: "Annet Tomcy" }],
   creator: "Annet Tomcy",
@@ -58,10 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="bg-[#D0D7FE] antialiased selection:bg-blue-200 selection:text-blue-900">
         {children}

@@ -68,8 +68,10 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => (
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${project.title} project on GitHub`}
             className="rounded-full p-2 transition-colors duration-300 hover:bg-gray-100"
           >
+            <span className="sr-only">View {project.title} on GitHub</span>
             <ExternalLink className="h-5 w-5 text-gray-600" />
           </a>
         </div>
